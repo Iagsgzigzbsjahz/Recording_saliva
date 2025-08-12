@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><%= title || "كأس بَعۡدان الذهبي" %></title>
+  <meta name="description" content="التسجيل الإلكتروني لبطولة كأس بَعۡدان الذهبي لكرة القدم - مديرية بعدان - قرية الرباعي" />
+  <link rel="icon" href="/logo.svg" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gold { background: linear-gradient(135deg, #b8860b, #ffd700); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+    .card { box-shadow: 0 10px 25px rgba(0,0,0,.07); }
+  </style>
+</head>
+<body class="bg-[#0b1a13] text-white">
+  <header class="border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a class="flex items-center gap-3" href="/">
+        <img src="/logo.svg" class="w-10 h-10" alt="Logo">
+        <span class="font-bold text-lg">كأس بَعۡدان الذهبي</span>
+      </a>
+      <nav class="flex items-center gap-3">
+        <a href="/" class="opacity-90 hover:opacity-100">الرئيسية</a>
+        <a href="/register" class="opacity-90 hover:opacity-100">التسجيل</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <%- body %>
+  </main>
+
+  <footer class="mt-16 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm opacity-80">
+      برعاية الشيخ عبد الحكيم الحبيشي — جميع الحقوق محفوظة © <%= new Date().getFullYear() %>
+    </div>
+  </footer>
+</body>
+</html>
